@@ -1,4 +1,4 @@
-/* let entrada = prompt("Ingrese su genero");
+let entrada = prompt("Ingrese su genero");
 while(entrada != "Marciano"){
    switch (entrada) {
        case "Hombre" || "hombre":
@@ -13,4 +13,3 @@ while(entrada != "Marciano"){
    }
    entrada = prompt("Ingrese su genero");
 }
- */
