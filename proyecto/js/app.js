@@ -1,6 +1,6 @@
 class Proyecto {
     constructor(pPromotor, pNombreProyecto, pUbicacion, pRequisitos, pTipo, pScoring, pFinanciado, pConstruccion, pVenta) {
-        this.promotor = pPromotor;
+        this.idPromotor = pPromotor;
         this.nombreProyecto = pNombreProyecto;
         this.ubicacion = pUbicacion;
         this.requisitos = pRequisitos;
@@ -26,3 +26,26 @@ proyecto2.rentabilidad();
 
 console.log(proyecto1.rentabilidad);
 console.log(proyecto2.rentabilidad);
+
+class Inversor {
+    constructor(pInversor, pNombreInversor, pCategoria) {
+        this.idInversor = pInversor;
+        this.nombreInversor = pNombreInversor;
+        this.categoria = pCategoria;
+    }
+    invirtio() {
+        this.inversion = true;
+    }
+    montoInvertido() {
+        this.invertido = prompt("¿Cuanto desea invertir? Ingrese un número");
+    }
+}
+
+
+const inversor1 = new Inversor("in01", "Javier", "A");
+
+
+inversor1.montoInvertido();
+
+console.log(inversor1);
+alert(inversor1.nombreInversor + " Invirtió: " + inversor1.invertido + " U$S");
