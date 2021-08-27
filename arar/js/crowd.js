@@ -186,7 +186,7 @@ finalizeButton.addEventListener("click", () => {
     overlay.classList.toggle("active");
     confirmation.classList.toggle("active");
     logo.classList.toggle("inactive");
-    openNav.classList.toggle("active");
+    openNav.classList.toggle("inactive");
     numberSection.classList.toggle("loading");
     const newTotal = Math.round(parseFloat(totalRaised.innerHTML.replace(",", "")) + pledge);
     let totalString = newTotal.toString();
