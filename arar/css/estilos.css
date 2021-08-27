@@ -863,7 +863,6 @@ textarea {
 }
 
 form {
-  padding-top: 11rem;
   border: none;
   max-width: 780px;
   margin: auto;
@@ -914,6 +913,7 @@ input[type="text"],
 [type="mail"],
 [type="email"],
 [type="password"],
+[type="radio"],
 select,
 textarea {
   background: none;
@@ -940,7 +940,6 @@ input[type="text"]:focus,
 [type="password"]:focus,
 textarea:focus {
   outline: none;
-  padding: 0 0 0.875em 0;
 }
 
 .mensaje {
@@ -1091,90 +1090,25 @@ textarea {
 }
 
 /* FIN LIGHTBOX */
-#confirmation {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  opacity: 0;
+main.inactive {
   pointer-events: none;
+}
+
+#logo {
+  z-index: 2;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
-  z-index: 3;
 }
 
-#confirmation.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-#confirmation section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 3rem 1.5rem;
-  -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-#confirmation.active section {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-#confirmation img {
-  margin-bottom: 1.5rem;
-}
-
-#confirmation h3 {
-  text-align: center;
-  line-height: 1.25;
-  margin-bottom: 1rem;
-}
-
-#confirmation p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-#confirmation button {
-  padding: 1.25rem 2rem;
+#logo.inactive {
+  opacity: 0;
 }
 
 #numbers {
   scroll-margin-top: 1.5rem;
 }
 
-#numbers .container {
+#numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1194,7 +1128,7 @@ textarea {
   transition: opacity 0.5s ease;
 }
 
-#numbers.loading .container {
+#numbers.loading {
   opacity: 0;
 }
 
@@ -1209,8 +1143,45 @@ textarea {
   margin: 1.5rem 0;
 }
 
-#stats {
+#progressBar {
+  position: relative;
+  display: block;
   width: 100%;
+  height: 1rem;
+  background-color: #e6e6e6;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+#progressBar div {
+  position: absolute;
+  left: 0;
+  display: block;
+  height: 1rem;
+  background-color: #3cb4ac;
+  border-radius: 0.5rem;
+}
+
+#about {
+  margin-bottom: 3rem;
+}
+
+#about p {
+  margin-bottom: 1rem;
+}
+
+#about button {
+  padding: 1.25rem 2rem;
+}
+
+.option {
+  padding: 2rem 1.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.stock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1218,40 +1189,150 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.stat:nth-of-type(2) {
-  border: none;
-  border-left: 1px solid #e6e6e6;
-  border-right: 1px solid #e6e6e6;
-  padding: 0 2.5rem;
-  margin: 0 2.5rem;
+.option.inactive {
+  pointer-events: none;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
-#stats h2,
-#stats p {
-  text-align: left;
+#overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  z-index: 1;
 }
 
-/* Selection Modal */
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#overlay.inactive {
+  pointer-events: none;
+}
+
+#mobileNav {
+  position: absolute;
+  top: 8rem;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 5%;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-transition-property: max-height, opacity;
+  transition-property: max-height, opacity;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+#mobileNav a:nth-of-type(2) {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+#mobileNav.active {
+  pointer-events: all;
+}
+
+#closeNav {
+  position: absolute;
+  top: 2px;
+  right: 1px;
+}
+
+.navToggle {
+  opacity: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  pointer-events: none;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  z-index: 2;
+}
+
+.navToggle.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  pointer-events: all;
+}
+
+.navToggle.inactive {
+  opacity: 1;
+  pointer-events: none;
+}
+
+#mobileNav a {
+  background-color: white;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+
+#mobileNav a:focus {
+  background-color: #f2f2f2;
+}
+
+#desktopNav {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+#desktopNav.inactive {
+  pointer-events: none;
+  opacity: 0;
+}
+
 #modal {
   position: fixed;
   top: 20vh;
   left: 5%;
-  height: 60vh;
+  height: 50vh;
   margin: 0;
   padding: 3rem 1.5rem;
   overflow-y: scroll;
   outline: none;
   border: none;
-  border-radius: 1rem;
   -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -1267,10 +1348,11 @@ textarea {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
   z-index: 3;
-  background: white;
 }
 
 #modal.active {
+  background: white;
+  border-radius: 1rem;
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -1301,8 +1383,8 @@ textarea {
   opacity: 1;
 }
 
-form {
-  margin: 2rem 0;
+#totalRaised {
+  color: #b06d74;
 }
 
 input[type="radio"] {
@@ -1317,15 +1399,15 @@ input[type="radio"] {
 }
 
 .selection.active {
-  border-color: #3cb4ac;
+  border-color: #b06d74;
 }
 
 .selection.active h4 {
-  color: #3cb4ac;
+  color: #b06d74;
 }
 
 .selection.active .radioCircle {
-  border-color: #3cb4ac;
+  border-color: #b06d74;
 }
 
 .select {
@@ -1353,11 +1435,11 @@ input[type="radio"] {
 }
 
 .select label:hover h4 {
-  color: #3cb4ac;
+  color: #b06d74;
 }
 
 .select label:hover .radioCircle {
-  border-color: #3cb4ac;
+  border-color: #b06d74;
 }
 
 .select h4,
@@ -1390,7 +1472,7 @@ input[type="radio"] {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: #3cb4ac;
+  background-color: #b06d74;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: -webkit-transform 0.25s ease;
@@ -1472,7 +1554,7 @@ input[type="radio"] {
 }
 
 .amount div {
-  width: 50%;
+  width: 60%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1485,7 +1567,6 @@ input[type="radio"] {
   position: absolute;
   top: 20px;
   left: 1.25rem;
-  content: "$";
   font: 500 1rem/1 "Commissioner", sans-serif;
   color: gray;
 }
@@ -1530,7 +1611,6 @@ input[type="radio"] {
   margin-bottom: 1rem;
 }
 
-/* Form Validation */
 .amount.error input {
   border-color: #ff525d;
 }
@@ -1540,7 +1620,7 @@ input[type="radio"] {
   position: absolute;
   top: 4rem;
   left: 0;
-  content: "Please enter a valid pledge";
+  content: "Ingrese una reserva válida";
   color: #ff525d;
   font-size: 0.75rem;
   opacity: 0;
@@ -1553,7 +1633,6 @@ input[type="radio"] {
   opacity: 1;
 }
 
-/* Confirmation Screen */
 #confirmation {
   position: fixed;
   top: 0;
@@ -1607,6 +1686,8 @@ input[type="radio"] {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  border-radius: 1rem;
+  background: white;
 }
 
 #confirmation.active section {
@@ -1631,6 +1712,147 @@ input[type="radio"] {
 
 #confirmation button {
   padding: 1.25rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .navToggle {
+    display: none;
+  }
+  #desktopNav {
+    display: block;
+  }
+  #stats {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2rem;
+  }
+  .stat:nth-of-type(2) {
+    border: none;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    padding: 0 2.5rem;
+    margin: 0 2.5rem;
+  }
+  #stats h2,
+  #stats p {
+    text-align: left;
+  }
+  .optionTitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .stockRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about .stock {
+    margin: 0;
+  }
+  #modal {
+    left: calc(50% - 350px);
+  }
+  .mobileStock {
+    display: none;
+  }
+  .selection .desktopStock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+  }
+  .select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .select .details {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .select h4 {
+    margin-right: 1.5rem;
+  }
+  .pledge {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .pledge p {
+    margin-top: 2.75rem;
+  }
+  .amount {
+    margin: 2rem 0;
+  }
+  .amount div,
+  .amount button {
+    margin-bottom: 0;
+  }
+  #confirmation section {
+    width: 480px;
+  }
 }
 
 /* FIN HEADER */

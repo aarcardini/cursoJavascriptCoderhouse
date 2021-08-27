@@ -26,7 +26,6 @@ textarea {
 }
 
 form {
-  padding-top: $SpMenu;
   border: none;
   max-width: 780px;
   margin: auto;
@@ -72,6 +71,7 @@ input[type="text"],
 [type="mail"],
 [type="email"],
 [type="password"],
+[type="radio"],
 select,
 textarea {
   background: none;
@@ -96,7 +96,6 @@ input[type="text"]:focus,
 [type="password"]:focus,
 textarea:focus {
   outline: none;
-  padding: 0 0 0.875em 0;
 }
 
 .mensaje {

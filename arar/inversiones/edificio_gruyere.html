@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="icon" href="../img/Logo_arar.svg">
-    <title>Estudio en Punta Carretas</title>
+    <title>Proyecto de Inversion Gruyere</title>
 </head>
 <body>
   <header>
@@ -250,24 +250,15 @@
 <section class="sepTop" id="modal">
   <svg width="15" height="15" id="closeModal"> <path d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z" fill="#000" fill-rule="evenodd" opacity=".4" /></svg>
   <h3>Invertir en Gruyere</h3>
-  <form action="" novalidate>
-      <div class="selection option"> <!-- DIV DE INVERSIÓN PPAL -->
-          <div class="select">
-              <input type="radio" name="selection" value="noReward" id="noReward">
-              <label for="noReward">
-                  <div class="radioCircle"></div>
-                  <div class="details">
-                      <h4>Check</h4>
-                  </div>
-              </label>
-          </div>
+  <form action="" id="newInv" novalidate>
+      <div class="selection option">
           <p> Recuerde que su inversión en esta etapa repersenta una promesa en la inversión final. Se confirmará la inversión una vez enviado el comprobante de transferencia a nuestras cuentas.</p>
           <div class="investment" style="max-height: 0;">
               <div class="amount">
                   <div>
-                      <input type="text" name="investment" id="option1" placeholder="Ingrese su Inversión">
+                      <input type="text" name="investment" id="montoInversion" placeholder="Ingrese su Inversión">
                   </div>
-                  <button class="btn btn-outline-danger">Continue</button>
+                  <button class="btn btn-outline-danger" id="confirmButton">Confirmar</button>
               </div>
           </div>
       </div>
@@ -279,10 +270,8 @@
   <section>
       <img src="../img/icon-check.svg" alt="Confirmación de inversión">
       <h3>Inversión ingresada correctamente</h3>
-      <p>
-          Tu inversión en esta instancia representa una promesa de inversión una vez se haya completado el monto requerido para la construcción.
-      </p>
-      <button>Got it!</button>
+      <p>Tu inversión en esta instancia representa una promesa de inversión una vez se haya completado el monto requerido para la construcción.</p>
+      <button>Cerrar</button>
   </section>
 </div>
 <!-- FIN MODAL CONFIRMACIÓN DE INVERSIÓN -->
@@ -303,63 +292,3 @@
 <!-- FIN BOTON IR ARRIBA -->
 </body>
 </html>
-
-
-
-  <!-- PORCENTAJES EN ETAPAS -->
- <!--  <section id="ganancias">
-    <div class="mt-lg-n8 mt-n6">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6 mb-4" >
-            <div class="card shadow-none border">
-              <div class="card-header text-sm-start text-center pt-4 px-4" style="height: 250px;">
-                <h5 class="mb-1">Proyecto aprobado</h5>
-                <hr class="horizontal dark my-0">
-                <p class="mb-3">El proyecto se encuentra aprobado por la IMM y por nosotros.</p>
-                <p class="mb-3">Builders ha auditado el plan de negocios del promotor y viabiliza la obra arquitectónica otorgando una estimación de un 12% de retorno sobre la inversión.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
-            <div class="card shadow-none border">
-              <div class="card-header text-sm-start text-center pt-4 px-4" style="height: 250px;">
-                <h5 class="mb-1">Ubicación</h5>
-                <hr class="horizontal dark my-0">
-                <p class="mb-3">Punta Gorda - Montevideo</p>
-                <h5 class="mb-1">Modalidad</h5>
-                <hr class="horizontal dark my-0">
-                <p class="mb-3">Fideicomiso con inversión previo comienzo de obras.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
-            <div class="card shadow-none border">
-              <div class="card-header text-sm-start text-center pt-4 px-4" style="height: 250px;">
-                <h5 class="mb-1">Scoring</h5>
-                <hr class="horizontal dark my-0">
-                <h3 class=" text-danger">Proyecto categoría A</h3>
-                <p>Un proyecto de categoría A implica un menor riesgo sobre la inversión realizada.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
-            <div class="card shadow-none border">
-              <div class="card-header text-sm-start text-center pt-4 px-4" style="height: 250px;">
-                <h5 class="mb-1">Faltas tú!</h5>
-                <hr class="horizontal dark my-0">
-                <p class="mb-3">Fideicomiso con inversión previo comienzo de obras.</p>
-                <div class="input-group mb-3 ">
-                  <input type="text" name="investment" style="box-shadow: none;" class="form-control" placeholder="U$S" aria-label="U$S" aria-describedby="invertido" id="option1">
-                </div>
-                <div>
-                  <button class="btn btn-outline-danger" type="button" id="inv">Quiero Invertir</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section> -->
-<!-- FIN PORCENTAJES EN ETAPAS -->

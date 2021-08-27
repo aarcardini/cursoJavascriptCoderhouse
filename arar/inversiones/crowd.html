@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Product Page</title>
+    <link rel="shortcut icon" type="icon/png" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <header style="z-index: 1000;">
+            <div class="logo" >    
+              <a href="../index.html"><img src="../img/Logo_arar.svg" alt="logo arar" id="logo"></a>
+              <svg width="16" height="15" id="openNav" class="navToggle active">
+                <g fill="#FFF" fill-rule="evenodd">
+                    <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
+                </g>
+            </svg>
+            <svg width="14" height="15" id="closeNav" class="navToggle">
+                <g fill="#FFF" fill-rule="evenodd">
+                    <path d="M2.404.782l11.314 11.314-2.122 2.122L.282 2.904z" />
+                    <path d="M.282 12.096L11.596.782l2.122 2.122L2.404 14.218z" />
+                </g>
+            </svg>
+            </div>
+            <nav class="menu" id="desktopNav">
+              <ul>
+                <li><a href="../servicios.html">Servicios</a></li>
+                <li><a href="../portafolio.html">Portafolio</a></li>
+                <li><a href="../inversiones.html">Inversiones</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../nosotros.html" >Sobre ARAR.</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+              </ul>
+            </nav>
+          </header>
+        <section class="sepTop">
+            <div class="container">
+              <div class="row">
+                <h1 class="h2 col-12 texto_titulo">Edificio Gruyere</h1>
+              </div>
+            </div>
+        </section>
+
+
+        <section class="sepBut" id="numbers">
+            <div class="container mt-7">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="col-lg-6 justify-content-center d-flex flex-column">
+                      <div class="card">
+                        <div class="d-block blur-shadow-image">
+                          <img src="../img/inversiones/punta-gorda.jpg" alt="img-blur-shadow-blog-2" class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 justify-content-center d-flex flex-column pl-lg-5 pt-lg-0 pt-3">
+                      <div>
+                      <h6 class="text-danger mt-3">EDIFICIO-RESIDENCIAL: Vivienda Colectiva</h6>
+                      <p class="card-description">Edificio Gruyere es un edificio ubicado en Punta Gorda con una de las mejores vistas de Montevideo.</p>
+                      <p class=" h6 author" style="padding-bottom: 1rem;"> Proyecto desarrollado por <a href="javascript:;" style=" text-decoration: none;" class="ms-1"><span class="text-danger"> arar.uy</span></a></p>
+                      </div>
+                      <div class="progress mb-3" id="progressBar">
+                        <div class="progress-bar bg-danger" role="progressbar" style="transition: width 0s ease-out; max-width: 100%; width: 0%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="stat" id="stats">
+                        <p>Financiado <b>$<span id="totalRaised">0</span></b> de <b>2.350.000 U$S</b> /&nbsp </p>
+                        <p> Cantidad de inversores <span id="totalBackers">0</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+  <!-- PORCENTAJES EN ETAPAS -->
+    <section id="ganancias">
+        <div class="mt-lg-n8 mt-n6">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-sm-6 mb-4" >
+                <div class="card shadow-none border">
+                  <div class="card-header text-sm-start text-center pt-4 px-4" style="height: 250px;">
+                    <h5 class="mb-1">Proyecto aprobado</h5>
+                    <hr class="horizontal dark my-0">
+                    <p class="mb-3">El proyecto se encuentra aprobado por la IMM y por nosotros.</p>
+                    <p class="mb-3">Builders ha auditado el plan de negocios del promotor y viabiliza la obra arquitectónica otorgando una estimación de un 12% de retorno sobre la inversión.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+                <div class="card shadow-none border">
+                  <div class="card-header text-sm-start text-center pt-4 px-4" style="height: 250px;">
+                    <h5 class="mb-1">Ubicación</h5>
+                    <hr class="horizontal dark my-0">
+                    <p class="mb-3">Punta Gorda - Montevideo</p>
+                    <h5 class="mb-1">Modalidad</h5>
+                    <hr class="horizontal dark my-0">
+                    <p class="mb-3">Fideicomiso con inversión previo comienzo de obras.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+                <div class="card shadow-none border">
+                  <div class="card-header text-sm-start text-center pt-4 px-4" style="height: 250px;">
+                    <h5 class="mb-1">Scoring</h5>
+                    <hr class="horizontal dark my-0">
+                    <h3 class=" text-danger">Proyecto categoría A</h3>
+                    <p>Un proyecto de categoría A implica un menor riesgo sobre la inversión realizada.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 mb-lg-0 mb-4">
+                <div class="card shadow-none border">
+                  <div class="card-header text-sm-start text-center pt-4 px-4" style="height: 250px;">
+                    <h5 class="mb-1">Faltas tú!</h5>
+                    <hr class="horizontal dark my-0">
+                    <p class="mb-3">Fideicomiso con inversión previo comienzo de obras.</p>
+                    <button class="specific btn btn-outline-danger">Invertir</button>
+                  </div>
+                  <div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  <!-- FIN PORCENTAJES EN ETAPAS -->
+
+  <section class="sepTop1">
+    <div class="container">
+      <div class="row">
+        <h2 class="h2 col-12 texto_titulo">Datos del Proyecto</h2>
+      </div>
+    </div>
+  </section>
+  <!-- ETAPA 1 -->
+  <section class=" sepTop1" id="etapas">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-12 my-auto">
+            <h4 class="text-gradient text-danger mb-0">¿Porqué invertir en Marco Bruto</h4>
+            <h4>Lorem ipsum dolor sit.</h4>
+            <p class="pe-md-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quam ullam quasi nostrum necessitatibus quisquam error, quaerat quis consequuntur explicabo, eos voluptate cum ut esse nisi aperiam. Ipsum, itaque nemo commodi amet consectetur laborum facilis qui officia cupiditate pariatur, obcaecati reiciendis odit reprehenderit, repudiandae iusto nihil illum deserunt debitis. Illo!</p>
+            <p class="pe-md-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt recusandae mollitia placeat unde sit id laborum necessitatibus fugit asperiores!</p>
+          </div>
+          <div class="col-md-5 col-12 my-auto">
+            <img class="w-100  shadow-sm" src="../img/inversiones/punta-gorda-plan1.jpg" alt="Planos">
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- ETAPA 2 -->
+  <section> 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-12 my-auto">
+            <img class="w-100  shadow-sm" src="../img/inversiones/punta-gorda-plan2.jpg" alt="Planos">
+          </div>
+          <div class="col-md-7 col-12 my-auto">
+            <div class="p-3 pt-0">
+              <h4 class="text-gradient text-danger mb-0">Modelo de negocio</h4>
+              <h4>Lorem ipsum dolor sit.</h4>
+              <p class="pe-md-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quam ullam quasi nostrum necessitatibus quisquam error, quaerat quis consequuntur explicabo, eos voluptate cum ut esse nisi aperiam. Ipsum, itaque nemo commodi amet consectetur laborum facilis qui officia cupiditate pariatur, obcaecati reiciendis odit reprehenderit, repudiandae iusto nihil illum deserunt debitis. Illo!</p>
+              <p class="pe-md-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt recusandae mollitia placeat unde sit id laborum necessitatibus fugit asperiores!</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- ETAPA 3 -->
+  <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-12 my-auto">
+            <h4 class="text-gradient text-danger mb-0">Ubicación y Proyecto</h4>
+            <h4>Lorem ipsum dolor sit.</h4>
+            <p class="pe-md-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quam ullam quasi nostrum necessitatibus quisquam error, quaerat quis consequuntur explicabo, eos voluptate cum ut esse nisi aperiam. Ipsum, itaque nemo commodi amet consectetur laborum facilis qui officia cupiditate pariatur, obcaecati reiciendis odit reprehenderit, repudiandae iusto nihil illum deserunt debitis. Illo!</p>
+            <p class="pe-md-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt recusandae mollitia placeat unde sit id laborum necessitatibus fugit asperiores!</p>
+          </div>
+          <div class="col-md-5 col-12 my-auto">
+              <img class="w-100  shadow-sm" src="../img/inversiones/punta-gorda-plan3.jpg" alt="Planos">
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- ETAPA 4 -->
+  <section class="sepBut"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-12 my-auto">
+              <img class="w-100  shadow-sm" src="../img/inversiones/punta-gorda-plan4.jpg" alt="Planos">
+            </div>
+            <div class="col-md-7 col-12 my-auto">
+              <div class="p-3 pt-0">
+                <h4 class="text-gradient text-danger mb-0">Acerca del promotor</h4>
+                <h4>Lorem ipsum dolor sit.</h4>
+                <p class="pe-md-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quam ullam quasi nostrum necessitatibus quisquam error, quaerat quis consequuntur explicabo, eos voluptate cum ut esse nisi aperiam. Ipsum, itaque nemo commodi amet consectetur laborum facilis qui officia cupiditate pariatur, obcaecati reiciendis odit reprehenderit, repudiandae iusto nihil illum deserunt debitis. Illo!</p>
+                <p class="pe-md-5 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt recusandae mollitia placeat unde sit id laborum necessitatibus fugit asperiores!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <span class="ir-arriba fas fa-arrow-up"></span>
+  <footer>
+    <div class="footer">
+      <ul class="social">
+        <li><a href="https://www.linkedin.com/in/alejandro-arcardini-ravera/" target="_blank"><i class="fab fa-2x fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.behance.net/aarcardini" target="_blank"><i class="fab fa-2x fa-behance"></i></a></li>
+        <li><a href="https://www.instagram.com/arar.uy/" target="_blank"><i class="fab fa-2x fa-instagram"></i></a></li>
+        <li><a href="https://wa.me/59899280545?text=Trabajemos%20en%20equipo%20y%20hagamos%20proyectos%20juntos" class="whatsapp" target="_blank"><i class="fab fa-2x fa-whatsapp"></i></a></li>
+      </ul>
+    </div>
+    <div class="madeby">
+      <p>made by <a href="../index.html"> Estudio ARAR.</a></p>
+    </div>
+  </footer>
+
+    </main>
+    <div id="overlay"></div>
+    <nav id="mobileNav" style="max-height: 0; opacity: 0;">
+        <a href="">Nosotros</a>
+        <a href="">Proyectos</a>
+        <a href="">Contacto</a>
+    </nav>
+    <section class="sepTop"id="modal">
+        <svg width="15" height="15" id="closeModal">
+            <path
+                d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z"
+                fill="#000" fill-rule="evenodd" opacity=".4" />
+        </svg>
+        <h3>Invertir en el Proyecto Gruyere</h3>
+        <p>Te invitamos a invertir en nuestro proyecto</p>
+        <form action="" novalidate>
+            <div class="selection option">
+                <div class="select">
+                    <input type="radio" name="selection" value="noReward" id="noReward">
+                    <label for="noReward">
+                        <div class="radioCircle"></div>
+                        <div class="details">
+                            <h4>Inversión sin base</h4>
+                        </div>
+                    </label>
+                </div>
+                <p>Esta opción no tiene un mínimo de inversión.</p>
+                <div class="pledge" style="max-height: 0;">
+                    <p>Ingrese el monto a invertir</p>
+                    <div class="amount">
+                        <div>
+                            <input type="text" name="pledge" id="option1" placeholder="U$S">
+                        </div>
+                        <button class="specific btn btn-outline-danger"> Invertir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="selection option pequeInv">
+                <div class="select">
+                    <input type="radio" name="selection" value="pequeInv" id="pequeInv">
+                    <label for="pequeInv">
+                        <div class="radioCircle"></div>
+                        <div class="details">
+                            <h4>Inversor precavido</h4>
+                            <h5>A partir de $1000</h5>
+                        </div>
+                    </label>
+                    <div class="stock desktopStock">
+                        <h6>101</h6>
+                        <span> disponible</span>
+                    </div>
+                </div>
+                <p>Inversión de bajo riesgo. Estás invirtiendo en la cuotaparte de una unidad de apartamento.</p>
+                <div class="stock mobileStock">
+                    <h6>101</h6>
+                    <span> disponible</span>
+                </div>
+                <div class="pledge" style="max-height: 0;">
+                    <p>Ingrese el monto a invertir</p>
+                    <div class="amount">
+                        <div>
+                            <input type="text" name="pledge" id="option2" placeholder="U$S">
+                        </div>
+                        <button class="specific btn btn-outline-danger"> Invertir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="selection option unDorm">
+                <div class="select">
+                    <input type="radio" name="selection" value="unDorm" id="unDorm">
+                    <label for="unDorm">
+                        <div class="radioCircle"></div>
+                        <div class="details">
+                            <h4>Pequeño inversor</h4>
+                            <h5>A partir de $150000</h5>
+                        </div>
+                    </label>
+                    <div class="stock desktopStock">
+                        <h6>10</h6>
+                        <span> disponible</span>
+                    </div>
+                </div>
+                <p>Inversión de alto riesgo. Estás invirtiendo sobre la totalidad de una unidad de un dormitorios.</p>
+                <div class="stock mobileStock">
+                    <h6>10</h6>
+                    <span> disponible</span>
+                </div>
+                <div class="pledge" style="max-height: 0;">
+                    <p>Ingrese el monto a invertir</p>
+                    <div class="amount">
+                        <div>
+                            <input type="text" name="pledge" id="option3" placeholder="U$S">
+                        </div>
+                        <button class="specific btn btn-outline-danger"> Invertir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="selection option dosDorm">
+                <div class="select">
+                    <input type="radio" name="selection" value="dosDorm" id="dosDorm">
+                    <label for="dosDorm">
+                        <div class="radioCircle"></div>
+                        <div class="details">
+                            <h4>Gran Inversor</h4>
+                            <h5>A partir de  $300000</h5>
+                        </div>
+                    </label>
+                    <div class="stock desktopStock">
+                        <h6>10</h6>
+                        <span> disponible</span>
+                    </div>
+                </div>
+                <p>Inversión de alto riesgo. Estás invirtiendo sobre la totalidad de una unidad de dos dormitorios.</p>
+                <div class="stock mobileStock">
+                    <h6>10</h6>
+                    <span> disponible</span>
+                </div>
+                <div class="pledge" style="max-height: 0;">
+                    <p>Ingrese el monto a invertir</p>
+                    <div class="amount">
+                        <div>
+                            <input type="text" name="pledge" id="option4" placeholder="U$S">
+                        </div>
+                        <button class="specific btn btn-outline-danger"> Invertir</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <div id="confirmation">
+        <section>
+            <h3>Gracias por confiar en nosotros</h3>
+            <p>Su reserva ha sido computada. El monto ingresado va a aparecer en tu perfil en cuanto verifiquemos la transacción hacia nuestras cuentas bancarias</p>
+            <button class="specific btn btn-outline-danger">Cerrar</button>
+        </section>
+    </div>
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>  
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- FIN BOOTSTRAP JS -->
+
+<!-- BOTON IR ARRIBA -->
+<script src="../js/arriba.js"></script>
+<!-- FIN BOTON IR ARRIBA -->
+ <script src="../js/crowd.js"></script>
+</body>
+
+</html>
