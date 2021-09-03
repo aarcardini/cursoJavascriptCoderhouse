@@ -68,6 +68,7 @@ h1 {
 
 input[type="text"],
 [type="tel"],
+[type="cliente"],
 [type="mail"],
 [type="email"],
 [type="password"],
@@ -94,6 +95,7 @@ input[type="text"]:focus,
 [type="mail"]:focus,
 [type="email"]:focus,
 [type="password"]:focus,
+[type="cliente"]:focus,
 textarea:focus {
   outline: none;
 }
@@ -149,6 +151,25 @@ textarea {
   }
 }
 #submitButton {
+  background: $blanco;
+  border: dashed 1px $negro;
+  color: $negro;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $negro;
+    color: $beige;
+  }
+}
+#verCliente {
   background: $blanco;
   border: dashed 1px $negro;
   color: $negro;
